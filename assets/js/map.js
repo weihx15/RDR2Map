@@ -44,17 +44,17 @@ const MapBase = {
         bounds: mapBoundary,
         attribution: '<a href="https://www.rockstargames.com/" target="_blank">Rockstar Games</a>'
       }),
-      'map.layers.detailed': L.tileLayer((isLocalHost() ? 'assets/maps/' : 'https://map-tiles.b-cdn.net/assets/rdr3/') + 'webp/detailed/{z}/{x}_{y}.webp', {
+      'map.layers.detailed': L.tileLayer((isLocalHost() ? 'assets/maps/' : 'assets/maps/' /* 'https://map-tiles.b-cdn.net/assets/rdr3/' */) + 'webp/detailed/{z}/{x}_{y}.webp', {
         noWrap: true,
         bounds: mapBoundary,
         attribution: '<a href="https://rdr2map.com/" target="_blank">RDR2Map</a>'
       }),
-      'map.layers.dark': L.tileLayer((isLocalHost() ? 'assets/maps/' : 'https://map-tiles.b-cdn.net/assets/rdr3/') + 'webp/darkmode/{z}/{x}_{y}.webp', {
+      'map.layers.dark': L.tileLayer((isLocalHost() ? 'assets/maps/' : 'assets/maps/' /* 'https://map-tiles.b-cdn.net/assets/rdr3/' */) + 'webp/darkmode/{z}/{x}_{y}.webp', {
         noWrap: true,
         bounds: mapBoundary,
         attribution: '<a href="https://github.com/TDLCTV" target="_blank">TDLCTV</a>'
       }),
-      'map.layers.black': L.tileLayer((isLocalHost() ? 'assets/maps/' : 'https://map-tiles.b-cdn.net/assets/rdr3/') + 'webp/black/{z}/{x}_{y}.webp', {
+      'map.layers.black': L.tileLayer((isLocalHost() ? 'assets/maps/' : 'assets/maps/' /* 'https://map-tiles.b-cdn.net/assets/rdr3/' */) + 'webp/black/{z}/{x}_{y}.webp', {
         noWrap: true,
         bounds: mapBoundary,
         attribution: '<a href="https://github.com/AdamNortonUK" target="_blank">AdamNortonUK</a>'
@@ -125,7 +125,7 @@ const MapBase = {
       layers: [mapLayers[this.themeOverride || Settings.baseLayer]],
     }).setView([this.viewportX, this.viewportY], this.viewportZoom);
 
-    MapBase.map.addControl(
+    /* MapBase.map.addControl(
       L.control.attribution({
         position: 'bottomright',
         prefix: '<a target="_blank" href="https://github.com/jeanropke/RDR2CollectorsMap/blob/master/CONTRIBUTORS.md" data-text="map.attribution_prefix">Collectors Map Contributors</a>'
@@ -135,7 +135,7 @@ const MapBase = {
     new L.Control.ZoomEx({
       position: "bottomright",
       className: "leaflet-zoomex-rightbottom",
-    }).addTo(MapBase.map);
+    }).addTo(MapBase.map); */
 
     L.control.layers(mapLayers).addTo(MapBase.map);
 

@@ -155,10 +155,10 @@ const Language = {
       .replace('{years}', Math.floor(diffDays / 365))
       .replace('{days}', diffDays % 365));
 
-    const wikiPages = { 'de': '-de-DE', 'fr': '-fr-FR', 'pt-BR': '-pt-BR', 'ru': '-ru-RU' };
+    /* const wikiPages = { 'de': '-de-DE', 'fr': '-fr-FR', 'pt-BR': '-pt-BR', 'ru': '-ru-RU' };
     document.querySelector('.wiki-page').setAttribute('href',
       `https://github.com/jeanropke/RDR2CollectorsMap/wiki/RDO-Collectors-Map-User-Guide${wikiPages[Settings.language] ?? ''}`
-    );
+    ); */
 
     document.getElementById('search').setAttribute('placeholder', Language.get('menu.search_placeholder'));
     placeholdersToHtml(document.getElementById('query-suggestions-hotkeys'), {

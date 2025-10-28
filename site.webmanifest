@@ -1,6 +1,6 @@
 {
-    "name": "RDO - Collectors Map",
-    "short_name": "RDO",
+    "name": "荒野大镖客2 在线地图",
+    "short_name": "RDR2 在线地图",
     "icons": [
         {
             "src": "./icon_144x144.png",
@@ -14,6 +14,6 @@
     "display": "standalone",
     "scope": "/",
     "start_url":"/",
-    "description":"Red Dead Online Collectors Map",
-    "lang":"en"
+    "description":"荒野大镖客2 在线地图",
+    "lang":"zh-Hans"
 }
